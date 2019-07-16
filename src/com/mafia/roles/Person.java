@@ -1,8 +1,8 @@
-package com.mafia;
+package com.mafia.roles;
 
 public class Person {
     private String name;
-    private boolean injured = false, dead = false, deadPending = false;
+    private boolean injured = false, dead = false, deadPending = false, disabled = false;
     private PersonType type;
     private PersonFaction faction;
 
@@ -36,8 +36,20 @@ public class Person {
         this.injured = true;
     }
 
+    public void setDisabled() {
+        this.disabled = true;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public PersonType getType() {
+        return type;
+    }
+
+    public PersonFaction getFaction() {
+        return faction;
     }
 
     public boolean isInjured() {
@@ -50,5 +62,9 @@ public class Person {
 
     public boolean isItDying() {
         return deadPending;
+    }
+
+    public boolean isDisabled() {
+        return disabled;
     }
 }
