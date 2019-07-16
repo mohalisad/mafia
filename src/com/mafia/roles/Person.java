@@ -17,7 +17,7 @@ public class Person {
     }
 
     public void heal(){
-        this.injured = true;
+        this.injured = false;
     }
 
     public void dieIfInjured(){
