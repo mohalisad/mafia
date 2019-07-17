@@ -1,10 +1,11 @@
 package com.mafia.roles;
 
-public class Person {
+public abstract class Person {
     private String name;
     private boolean injured = false, dead = false, deadPending = false, disabled = false, hasSword = false;
     private PersonType type;
     private PersonFaction faction;
+    private Person connected = null;
 
     protected Person(String name,PersonType type,PersonFaction faction){
         this.name = name;
@@ -29,6 +30,18 @@ public class Person {
     public void dieIfPending(){
         if (deadPending){
             dead = true;
+        }
+    }
+
+    public void connectTo(Person anotherPerson){
+        connected = anotherPerson;
+        anotherPerson.connected = this;
+    }
+
+    public void disconnect(){
+        if (connected != null){
+            connected.connected = null;
+            connected = null;
         }
     }
 
