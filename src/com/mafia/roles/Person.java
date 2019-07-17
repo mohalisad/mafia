@@ -2,7 +2,7 @@ package com.mafia.roles;
 
 public class Person {
     private String name;
-    private boolean injured = false, dead = false, deadPending = false, disabled = false;
+    private boolean injured = false, dead = false, deadPending = false, disabled = false, hasSword = false;
     private PersonType type;
     private PersonFaction faction;
 
@@ -40,6 +40,10 @@ public class Person {
         this.disabled = true;
     }
 
+    public void giveSword(){
+        this.hasSword = true;
+    }
+
     public String getName() {
         return name;
     }
@@ -66,5 +70,9 @@ public class Person {
 
     public boolean isDisabled() {
         return disabled;
+    }
+
+    public boolean hasSword() {
+        return hasSword;
     }
 }
