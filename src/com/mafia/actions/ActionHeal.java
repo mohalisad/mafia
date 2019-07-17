@@ -11,6 +11,6 @@ public class ActionHeal extends ActionBase {
     public String getLog() {
         if (!isUsed())
             return null;
-        return getCaster().getName() + " healed " + getPerson1().getName();
+        return getCaster().getTypeInString() + " healed " + getPerson1().getTypeInString();
     }
 }

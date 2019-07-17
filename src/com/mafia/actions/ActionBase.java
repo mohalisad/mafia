@@ -3,8 +3,8 @@ package com.mafia.actions;
 import com.mafia.roles.Person;
 
 public abstract class ActionBase {
-    private ActionAffect affectType;
-    private ActionType type;
+    protected ActionAffect affectType;
+    protected ActionType type;
     private Person caster, person1 = null, person2 = null;
     private boolean ignorable;
     private boolean used = false;
@@ -15,7 +15,7 @@ public abstract class ActionBase {
         this.ignorable  = ignorable;
     }
 
-    public boolean use(Person... people) throws Exception {
+    public void use(Person... people) {
         if(people.length == validLength()) {
             if (people.length > 0) {
                 person1 = people[0];
@@ -24,9 +24,8 @@ public abstract class ActionBase {
                 }
             }
             used = true;
-            return true;
+            caster.actionUsed();
         }
-        return false;
     }
 
     private int validLength(){

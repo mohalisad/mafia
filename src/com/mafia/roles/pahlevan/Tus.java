@@ -6,4 +6,14 @@ public class Tus extends PahlevanBase {
     public Tus(String name){
         super(name, PersonType.TUS);
     }
+
+    @Override
+    public void getAction() {
+
+    }
+
+    @Override
+    public void actionUsed() {
+
+    }
 }

@@ -6,4 +6,14 @@ public class Afrasiab extends AhrimanBase {
     public Afrasiab(String name){
         super(name, PersonType.AFRASIAB);
     }
+
+    @Override
+    public void getAction() {
+
+    }
+
+    @Override
+    public void actionUsed() {
+
+    }
 }

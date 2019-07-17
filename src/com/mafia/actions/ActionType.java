@@ -10,4 +10,5 @@ public enum ActionType {
     FEATHER1,
     FEATHER2,
     FEATHER3,
+    HEAD_MASTER_REMEMBER,
 }

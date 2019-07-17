@@ -6,4 +6,14 @@ public class Rostam extends PahlevanBase {
     public Rostam(String name){
         super(name, PersonType.ROSTAM);
     }
+
+    @Override
+    public void getAction() {
+
+    }
+
+    @Override
+    public void actionUsed() {
+
+    }
 }

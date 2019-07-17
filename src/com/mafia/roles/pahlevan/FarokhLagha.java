@@ -6,4 +6,14 @@ public class FarokhLagha extends PahlevanBase {
     public FarokhLagha(String name){
         super(name, PersonType.FAROKH_LAGHA);
     }
+
+    @Override
+    public void getAction() {
+
+    }
+
+    @Override
+    public void actionUsed() {
+
+    }
 }
