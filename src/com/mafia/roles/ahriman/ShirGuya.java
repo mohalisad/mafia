@@ -1,5 +1,6 @@
 package com.mafia.roles.ahriman;
 
+import com.mafia.actions.ActionBase;
 import com.mafia.roles.PersonType;
 
 public class ShirGuya extends AhrimanBase {
@@ -8,8 +9,8 @@ public class ShirGuya extends AhrimanBase {
     }
 
     @Override
-    public void getAction() {
-
+    public ActionBase getAction() {
+        return null;
     }
 
     @Override

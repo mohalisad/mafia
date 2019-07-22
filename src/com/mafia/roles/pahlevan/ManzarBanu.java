@@ -1,5 +1,6 @@
 package com.mafia.roles.pahlevan;
 
+import com.mafia.actions.ActionBase;
 import com.mafia.roles.PersonType;
 
 public class ManzarBanu extends PahlevanBase {
@@ -8,8 +9,8 @@ public class ManzarBanu extends PahlevanBase {
     }
 
     @Override
-    public void getAction() {
-
+    public ActionBase getAction() {
+        return null;
     }
 
     @Override

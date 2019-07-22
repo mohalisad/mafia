@@ -10,7 +10,7 @@ public class GameManager {
     List<Person> people = new ArrayList<Person>();
     GameStats stats = new GameStats();
 
-    private void startGame(){
+    public void startGame(){
         init_phase();
         while (true){
             day_phase();

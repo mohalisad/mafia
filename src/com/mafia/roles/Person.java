@@ -1,11 +1,10 @@
 package com.mafia.roles;
 
-import com.mafia.roles.ahriman.Kamus;
-import com.mafia.roles.mostaghel.GhamarVazir;
+import com.mafia.actions.ActionBase;
 
 public abstract class Person {
     private String name;
-    private boolean injured = false, dead = false, deadPending = false, disabled = false, hasSword = false;
+    private boolean injured = false, dead = false, deadPending = false, instantDeadPending = false, disabled = false, hasSword = false;
     private PersonType type;
     private PersonFaction faction;
     private Person connected = null;
@@ -20,7 +19,11 @@ public abstract class Person {
         this.dead = true;
     }
 
-    public void heal(){
+    public void instantKill() {
+        this.instantDeadPending = true;
+    }
+
+    public void heal() {
         this.injured = false;
     }
 
@@ -31,7 +34,7 @@ public abstract class Person {
     }
 
     public void dieIfPending(){
-        if (deadPending){
+        if (deadPending || instantDeadPending){
             dead = true;
         }
     }
@@ -96,6 +99,6 @@ public abstract class Person {
         return PersonType.stringValue(type);
     }
 
-    public abstract void getAction();
+    public abstract ActionBase getAction();
     public abstract void actionUsed();
 }

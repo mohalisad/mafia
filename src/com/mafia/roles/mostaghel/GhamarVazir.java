@@ -1,5 +1,6 @@
 package com.mafia.roles.mostaghel;
 
+import com.mafia.actions.ActionBase;
 import com.mafia.roles.PersonType;
 
 public class GhamarVazir extends MostaghelBase {
@@ -8,8 +9,8 @@ public class GhamarVazir extends MostaghelBase {
     }
 
     @Override
-    public void getAction() {
-
+    public ActionBase getAction() {
+        return null;
     }
 
     @Override

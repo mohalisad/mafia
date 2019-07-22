@@ -5,14 +5,16 @@ import com.mafia.roles.Person;
 public abstract class ActionBase {
     protected ActionAffect affectType;
     protected ActionType type;
+    protected ActionAppliesType appliesTo;
     private Person caster, person1 = null, person2 = null;
     private boolean ignorable;
     private boolean used = false;
-    protected ActionBase(Person caster, ActionAffect affectType, ActionType type, boolean ignorable){
+    protected ActionBase(Person caster, ActionAffect affectType, ActionType type, ActionAppliesType appliesTo, boolean ignorable){
         this.caster     = caster;
         this.affectType = affectType;
         this.type       = type;
         this.ignorable  = ignorable;
+        this.appliesTo  = appliesTo;
     }
 
     public void use(Person... people) {

@@ -5,7 +5,7 @@ import com.mafia.roles.Person;
 public class ActionFeather extends ActionBase {
     int featherNumber;
     public ActionFeather(Person caster, int featherNumber){
-        super(caster, ActionAffect.GLOBAL, null, true);
+        super(caster, ActionAffect.GLOBAL, null, ActionAppliesType.NONE, true);
         this.featherNumber = featherNumber;
         switch (featherNumber){
             case 1:
